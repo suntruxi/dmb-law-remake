@@ -1,0 +1,52 @@
+.echipa-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-card {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+  text-align: center;
+}
+
+.member-image {
+  width: 100%;
+  max-width: 500px; /* Adjust the maximum width as per your preference */
+  height: auto;
+  border-radius: 8px;
+  transition: filter 0.3s; /* Adding transition for smoother hover effect */
+}
+
+.member-card:hover .member-image {
+  filter: brightness(50%); /* Reduce brightness to darken the image */
+}
+
+.member-details {
+  margin-top: 10px;
+}
+
+.member-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.member-title {
+  margin: 0;
+  color: #6c757d;
+}
+
+.member-description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 800px) {
+  .echipa-container {
+    flex-wrap: wrap;
+  }
+  .member-card {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+}

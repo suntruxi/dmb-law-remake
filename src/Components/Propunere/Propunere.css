@@ -1,0 +1,40 @@
+.propunere-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.proposal-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.proposal-card:hover {
+  transform: translateY(-10px);
+}
+
+.proposal-card h3 {
+  margin-top: 0;
+}
+
+.proposal-card p {
+  color: #6c757d;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 650px) {
+  .propunere-container {
+    flex-direction: column;
+  }
+  .proposal-card {
+    flex-basis: 100%;
+    margin: 20px;
+    flex-direction: column;
+  }
+}
