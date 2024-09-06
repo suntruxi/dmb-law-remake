@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h2>Contact Us</h2>
-          <p>Email: office@dmblaw.com</p>
+          <p>Email: office@dmblaw.ro</p>
           <p>Phone: +40727101633</p>
           <p>Address: Str. Piotr Ilici Ceaikovski 3 Bucuresti</p>
         </div>

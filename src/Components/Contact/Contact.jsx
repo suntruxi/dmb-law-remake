@@ -18,7 +18,7 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            <img src={mail_icon} alt="" /> Email: office@dmblaw.com
+            <img src={mail_icon} alt="" /> Email: office@dmblaw.ro
           </li>
           <li>
             <img src={phone_icon} alt="" /> Telefon: +40727101633
