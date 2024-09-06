@@ -13,8 +13,8 @@ const Contact = () => {
           Contact <img src={msg_icon} alt="" />
         </h3>
         <p>
-          Text lorem ipsum - aici putem pune o scurta fraza ce invita
-          utilizatorul sa ne contacteze
+          Suntem aici pentru tine! Contactează-ne pentru a discuta cum putem să
+          îți oferim cele mai bune soluții.
         </p>
         <ul>
           <li>

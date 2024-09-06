@@ -11,8 +11,9 @@
 
 .member-image {
   width: 100%;
-  max-width: 500px; /* Adjust the maximum width as per your preference */
-  height: auto;
+  max-width: 600px; /* Set a maximum width to prevent oversized images */
+  aspect-ratio: 3 / 4; /* Maintain consistent aspect ratio */
+  object-fit: cover; /* Ensure image fills its container without distortion */
   border-radius: 8px;
   transition: filter 0.3s; /* Adding transition for smoother hover effect */
 }

@@ -1,0 +1,51 @@
+/* Arii.css */
+.arii-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto 0; /* Added 20px margin-top */
+}
+.section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section:hover {
+  background-color: #e9e9e9;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.section.open .section-title {
+  color: #007bff;
+}
+
+.section.open .section-description {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.section-description {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

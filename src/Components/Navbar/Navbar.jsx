@@ -1,76 +1,130 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/dmb-logo-index.jpeg";
 import menu_icon from "../../assets/menu-icon.png";
-import { Link } from "react-scroll";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    });
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [mobileMenu, setMobileMenu] = useState(false);
-
   const toggleMenu = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    setMobileMenu((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenu &&
+        !event.target.closest(".menu-icon") &&
+        !event.target.closest("nav ul")
+      ) {
+        setMobileMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobileMenu]);
+
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [location]);
+
+  // Custom function to handle scroll navigation
+  const handleScrollToSection = (section) => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to the home page first
+      setTimeout(() => {
+        scroller.scrollTo(section, {
+          smooth: true,
+          offset: -260,
+          duration: 500,
+        });
+      }, 100); // Adjust timeout as necessary for page load
+    } else {
+      scroller.scrollTo(section, {
+        smooth: true,
+        offset: -260,
+        duration: 500,
+      });
+    }
   };
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <img src={logo} alt="" className="logo" />
-      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
+      <img src={logo} alt="Logo" className="logo" />
+      <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
         <li>
-          <Link to="hero" smooth={true} offset={0} duration={500}>
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link
-            to="propunere-container"
-            smooth={true}
-            offset={-260}
-            duration={500}
+          <button
+            onClick={() => handleScrollToSection("propunere-container")}
+            className="btn-transparent"
           >
             Servicii
-          </Link>
+          </button>
         </li>
         <li>
-          <Link to="about" smooth={true} offset={-150} duration={500}>
+          <button
+            onClick={() => handleScrollToSection("about")}
+            className="btn-transparent"
+          >
             Despre Noi
-          </Link>
+          </button>
         </li>
         <li>
-          <Link
-            to="echipa-container"
-            smooth={true}
-            offset={-260}
-            duration={500}
+          <button
+            onClick={() => handleScrollToSection("echipa-container")}
+            className="btn-transparent"
           >
             Echipa
-          </Link>
+          </button>
         </li>
         <li>
-          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
+          <Link to="/arii-de-practica">Arii de Practica</Link>
+        </li>
+        <li>
+          <Link to="/noutati">Noutati Legislative</Link>
+        </li>
+        <li>
+          <button
+            onClick={() => handleScrollToSection("testimonials")}
+            className="btn-transparent"
+          >
             Testimoniale
-          </Link>
+          </button>
         </li>
         <li>
-          <Link
-            to="contact"
-            smooth={true}
-            offset={-260}
-            duration={500}
-            className="btn"
+          <button
+            onClick={() => handleScrollToSection("contact")}
+            className="btn-transparent"
           >
             Contact
-          </Link>
+          </button>
         </li>
       </ul>
-      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
+      <img
+        src={menu_icon}
+        alt="Menu Icon"
+        className="menu-icon"
+        onClick={toggleMenu}
+      />
     </nav>
   );
 };

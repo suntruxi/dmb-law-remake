@@ -1,7 +1,7 @@
 import React from "react";
 import "./Echipa.css";
-import DianaImage from "../../assets/diana-bejenaru-photo.jpeg";
-import TeoImage from "../../assets/teodora-stancu-photo.jpeg";
+import DianaImage from "../../assets/IMG_9628.jpg";
+import AndreeaImage from "../../assets/IMG_9640.jpg";
 import AngajatImage from "../../assets/no-profile-pic.jpg";
 
 const teamMembers = [
@@ -13,14 +13,14 @@ const teamMembers = [
   },
 
   {
-    name: "Teodora Stancu",
-    title: "Paralegal",
-    image: TeoImage,
+    name: "Andreea Ciuca",
+    title: "Consilier Juridic",
+    image: AndreeaImage,
     // description: "lorem ipsum",
   }, // Add comma here
 
   {
-    name: "Angajat",
+    name: "Larisa Abălașei",
     title: "Intern",
     image: AngajatImage,
     // description: "lorem ipsum",

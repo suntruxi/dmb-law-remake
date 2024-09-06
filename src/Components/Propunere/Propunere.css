@@ -26,15 +26,15 @@
   color: #6c757d;
 }
 
-/* MEDIA QUERY */
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 900px) {
+  .propunere-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 650px) {
   .propunere-container {
-    flex-direction: column;
-  }
-  .proposal-card {
-    flex-basis: 100%;
-    margin: 20px;
-    flex-direction: column;
+    grid-template-columns: 1fr; /* One column on very small screens */
   }
 }

@@ -1,0 +1,39 @@
+.noutati-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.noutati-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Each article takes up the full width */
+  grid-gap: 20px;
+}
+
+.noutati-article {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto; /* Center the articles */
+  max-width: 1000px; /* Limit the maximum width of the articles */
+}
+
+.noutati-article h2 {
+  margin-top: 0;
+}
+
+.article-image {
+  margin-bottom: 10px;
+  text-align: center; /* Center the image */
+}
+
+.article-image img {
+  max-width: 80%; /* Ensure the image doesn't exceed its container */
+  height: auto;
+  border-radius: 8px; /* Add rounded corners to the image */
+}
+
+.article-title {
+  font-weight: bold;
+  margin-top: 10px;
+}

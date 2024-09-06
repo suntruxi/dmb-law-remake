@@ -1,6 +1,7 @@
 .hero {
   width: 100%;
   min-height: 100vh;
+  position: relative; /* Add this to position the pseudo-element */
   background: linear-gradient(rgba(137, 2, 62, 0.3), rgba(137, 2, 62, 0.3)),
     url("../../assets/lady-justice-2.jpeg");
   background-size: cover;
@@ -10,14 +11,31 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Pseudo-element for the fading background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  z-index: 1; /* Ensure the pseudo-element is behind the text */
+}
+
 .hero-text {
   text-align: center;
   max-width: 800px;
+  position: relative; /* Ensure text is above the pseudo-element */
+  z-index: 2; /* Bring text above the pseudo-element */
 }
+
 .hero-text h1 {
   font-size: 60px;
   font-weight: 600;
 }
+
 .hero-text p {
   max-width: 700px;
   margin: 10px auto 20px;

@@ -1,12 +1,13 @@
 import React from "react";
 import "./About.css";
 import about_img from "../../assets/story-img.jpeg";
+import user_logo from "../../assets/user-logo.png"; // Update the path if needed
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={about_img} alt="" className="about-img" />
+        <img src={about_img} alt="About Us" className="about-img" />
       </div>
       <div className="about-right">
         <h2>Despre Noi</h2>
@@ -33,6 +34,13 @@ const About = () => {
           lung pentru o mai bună administrare a afacerii tale, bazată pe o
           conlucrare, un aport continuu de implicare între părți.
         </p>
+        <div className="membership-info">
+          <img src={user_logo} alt="User Ro Logo" className="user-logo" />
+          <p>
+            Suntem membri User Ro, angajați să respectăm cele mai înalte
+            standarde de profesionalism și etică.
+          </p>
+        </div>
       </div>
     </div>
   );

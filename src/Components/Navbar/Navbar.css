@@ -11,25 +11,69 @@ nav {
   justify-content: space-between;
   z-index: 10;
 }
+
 .logo {
   width: 180px;
 }
+
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
   font-size: 16px;
 }
+
 .dark-nav {
   background: #89023e;
   transition: 0.5s;
 }
+
 .menu-icon {
   display: none;
 }
 
-/* MEDIA QUERY */
+.btn-transparent {
+  background: none;
+  border: none;
+  color: #fff;
+  font: inherit;
+  margin: 5px 20px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline;
+}
 
+.btn-transparent:hover,
+.btn-transparent:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Styles to unify the display and alignment of nav items */
+.nav-link, /* Assuming you add this class to the Link components */
+.btn-transparent {
+  background: none;
+  border: none;
+  color: #fff;
+  font: inherit;
+  margin: 5px 20px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.btn-transparent:hover,
+.btn-transparent:focus {
+  color: #ccc;
+}
+
+/* MEDIA QUERY */
 @media (max-width: 1000px) {
   .logo {
     width: 140px;
@@ -46,7 +90,7 @@ nav ul li {
   nav ul {
     position: fixed;
     top: 0;
-    right: 0px;
+    right: 0;
     bottom: 0;
     background: #89023e;
     z-index: -1;
@@ -56,7 +100,8 @@ nav ul li {
   }
   nav ul li {
     display: block;
-    margin: 25px 40px;
+    margin: 25px 40px; /* Consistent margins for all items */
+    padding: 0; /* Ensures no extra padding for buttons vs. links */
   }
   .menu-icon {
     display: block;

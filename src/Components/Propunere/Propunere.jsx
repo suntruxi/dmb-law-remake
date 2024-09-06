@@ -36,7 +36,7 @@ const proposals = [
 
 const Propunere = () => {
   return (
-    <div className="propunere-container">
+    <div className="propunere-container" id="servicii">
       {proposals.map((proposal, index) => (
         <div key={index} className="proposal-card">
           <h3>{proposal.title}</h3>
