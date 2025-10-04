@@ -1,29 +1,37 @@
 import React from "react";
 import "./Echipa.css";
-import DianaImage from "../../assets/IMG_9628.jpg";
-import AndreeaImage from "../../assets/IMG_9640.jpg";
-import AngajatImage from "../../assets/no-profile-pic.jpg";
+import DianaImage from "../../assets/diana.jpeg";
+import AnaImage from "../../assets/ana.jpeg";
+import EvelinaImage from "../../assets/evelina.jpeg";
+import AndreeaImage from "../../assets/andreea.jpeg";
 
 const teamMembers = [
   {
-    name: "Diana Bejenaru",
+    name: "Diana Maria Bejenaru",
     title: "Avocat Titular",
     image: DianaImage,
-    // description: "lorem impsum",
+    description: "Drept Comercial, Drept Administrativ & Achiziții publice, Regulatory & Compliance, GDPR",
   },
 
   {
-    name: "Andreea Ciuca",
-    title: "Consilier Juridic",
-    image: AndreeaImage,
-    // description: "lorem ipsum",
-  }, // Add comma here
+    name: "Ana Maria Albu",
+    title: "Avocat Partener",
+    image: AnaImage,
+    description: "Drept Contractual, Drept Comercial, M&A, Dreptul Muncii",
+  },
 
   {
-    name: "Larisa Abălașei",
-    title: "Intern",
-    image: AngajatImage,
-    // description: "lorem ipsum",
+    name: "Evelina Bidulescu",
+    title: "Avocat Colaborator",
+    image: EvelinaImage,
+    description: "Drept Comercial, Drept Contractual, Regulatory & Compliance, Dreptul Muncii",
+  },
+
+  {
+    name: "Andreea Ciucă",
+    title: "Paralegal",
+    image: AndreeaImage,
+    description: "Dreptul Transporturilor, GDPR, Insolvență-faliment",
   },
 ];
 

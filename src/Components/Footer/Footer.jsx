@@ -10,7 +10,7 @@ const Footer = () => {
           <h2>Contact Us</h2>
           <p>Email: office@dmblaw.ro</p>
           <p>Phone: +40727101633</p>
-          <p>Address: Str. Piotr Ilici Ceaikovski 3 Bucuresti</p>
+          <p>Address: Sos. Pipera, nr. 1/VII, Nord City Tower, Etajul 10, Voluntari, Jud. Ilfov</p>
         </div>
         <div className="footer-section">
           <h2>Follow Us</h2>
