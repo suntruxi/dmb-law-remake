@@ -2,7 +2,7 @@
   margin: 80px auto;
   max-width: 90%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -41,19 +41,37 @@
   margin-right: 10px;
 }
 
-/* Additional CSS if needed */
-/* .contact-col iframe {
-  border: none;
-  width: 100%;
-  height: 100%;
-} */
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-form-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-col iframe {
+  display: block;
+  min-height: 800px;
+}
 
 /* MEDIA QUERY */
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
   .contact {
     display: block;
   }
   .contact-col {
     padding: 20px;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .contact-form-col iframe {
+    min-height: 700px;
   }
 }

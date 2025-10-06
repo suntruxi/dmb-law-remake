@@ -1,0 +1,18 @@
+.contact-form-section {
+  background: #89023e;
+  padding: 120px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-iframe {
+  display: block;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 40px 5%;
+  }
+}
